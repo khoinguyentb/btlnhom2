@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/dialog_loai_dich_vu_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/orange"
+            android:text="thêm loại dịch vụ"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="tên loại dịch vụ"
+                app:errorEnabled="true"
+                android:id="@+id/ed_loaidichvu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dialog_loai_dich_vu_edt_ten"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="giá"
+                app:errorEnabled="true"
+                android:id="@+id/ed_loaidichvuPrice"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dialog_loai_dich_vu_edt_gia"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+                <Button
+                    android:id="@+id/btn_themdv"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="thêm"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    />
+                <Button
+                    android:id="@+id/btn_huydv"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="hủy"
+                    android:backgroundTint="@color/dark_gray"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Hotel Manager</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="trang_thai_hd">
+        <item>Chưa nhận phòng</item>
+        <item>Chưa trả phòng</item>
+        <item>Đã trả phòng</item>
+    </string-array>
+</resources>

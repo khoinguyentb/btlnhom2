@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Hóa đơn"
+        android:id="@+id/nav_1"
+        android:icon="@drawable/ic_baseline_addchart_24" />
+    <item
+        android:title="Dịch vụ"
+        android:id="@+id/nav_2"
+        android:icon="@drawable/ic_baseline_room_service_24"/>
+    <item
+        android:title="Phòng"
+        android:id="@+id/nav_3"
+        android:icon="@drawable/baseline_favorite_24"/>
+    <item
+        android:title="Khách hàng"
+        android:id="@+id/nav_4"
+        android:icon="@drawable/ic_baseline_emoji_people_24"/>
+    <item
+        android:title="Setting"
+        android:id="@+id/nav_5"
+        android:icon="@drawable/baseline_settings_24"/>
+</menu>

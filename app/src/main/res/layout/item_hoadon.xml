@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="15dp"
+    android:padding="5dp"
+    app:cardCornerRadius="10dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:id="@+id/tv_bill_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="id phòng"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/tv_bill_guest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="id khách hàng"
+            android:textColor="@color/black"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <TextView
+                android:id="@+id/tv_bill_start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="ngày bắt đầu"
+                android:layout_weight="2"
+                />
+
+            <TextView
+                android:id="@+id/tv_bill_end_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="ngày kết thúc"
+                android:layout_weight="2"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_bill_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="ngày tạo hóa đơn"
+
+            />
+        <TextView
+            android:id="@+id/tv_room_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Tiền phòng"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <TextView
+                android:id="@+id/tv_bill_service_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="tiền đồ bị mất"
+                android:layout_weight="2"
+
+                />
+            <TextView
+                android:id="@+id/tv_bill_lost_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="tiền dịch vụ"
+                android:layout_weight="2"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_bill_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ghi chú"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_bill_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="tổng tiền "
+            android:textColor="@color/black"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_bill_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="trạng thái phòng"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
+            <Button
+                android:id="@+id/btn_check_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhận phòng"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

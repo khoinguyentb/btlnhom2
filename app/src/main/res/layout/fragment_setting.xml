@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.FragmentSetting"
+    android:gravity="center"
+    android:id="@+id/fragment_setting">
+
+    <Button
+        android:id="@+id/btnThongKe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:layout_margin="10dp"
+        android:text="Thống kê" />
+
+    <Button
+        android:id="@+id/btnDoiMatKhau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:layout_margin="10dp"
+        android:text="Đổi Mật Khẩu"/>
+
+    <Button
+        android:id="@+id/btnDX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:text="Đăng xuất"
+        tools:ignore="MissingConstraints"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
