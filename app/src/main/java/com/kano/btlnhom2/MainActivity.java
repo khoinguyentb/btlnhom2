@@ -54,23 +54,21 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.nav_1:
-                        viewPager.setCurrentItem(0);
-                        break;
-                    case R.id.nav_2:
-                        viewPager.setCurrentItem(1);
-                        break;
-                    case R.id.nav_3:
-                        viewPager.setCurrentItem(2);
-                        break;
-                    case R.id.nav_4:
-                        viewPager.setCurrentItem(3);
-                        break;
-                    case R.id.nav_5:
-                        viewPager.setCurrentItem(4);
-                        break;
+                if (item.getItemId() == R.id.nav_1){
+                    viewPager.setCurrentItem(0);
                 }
+                else if (item.getItemId()== R.id.nav_2) {
+                    viewPager.setCurrentItem(1);
+                }
+                else if (item.getItemId()== R.id.nav_3) {
+                    viewPager.setCurrentItem(2);
+                }
+                else if (item.getItemId()== R.id.nav_4) {
+                    viewPager.setCurrentItem(3);
+                }else if (item.getItemId()== R.id.nav_5) {
+                    viewPager.setCurrentItem(4);
+                }
+
                 return false;
             }
         });
