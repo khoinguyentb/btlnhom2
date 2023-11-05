@@ -106,16 +106,17 @@
                     </LinearLayout>
                 </LinearLayout>
                     <Button
-                    android:id="@+id/btn_tim_phong"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:text="Tìm"
+                        android:id="@+id/btn_tim_phong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:text="Tìm"
+                        android:background="@color/orange"
                     />
                 </LinearLayout>
-
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -172,25 +173,30 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="6">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tiền đền bù :  "
                     android:textSize="15dp"
+                    android:layout_weight="1"
                     android:textColor="@color/black"
                     />
 
                 <EditText
+                    android:layout_weight="3"
                     android:id="@+id/ed_lost_total"
-                    android:layout_width="200dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     />
                 <TextView
+                    android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="VNĐ"
+                    android:gravity="center"
                     android:layout_marginLeft="15dp"
                     android:textColor="@color/black"/>
             </LinearLayout>
@@ -222,7 +228,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="10">
                 <TextView
                     android:id="@+id/dialog_tv_bill_total"
                     android:layout_width="wrap_content"
@@ -232,13 +239,15 @@
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:layout_weight="8"
                     />
                 <ImageButton
                     android:id="@+id/btn_refresh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_baseline_refresh_24"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="2"/>
 
             </LinearLayout>
 

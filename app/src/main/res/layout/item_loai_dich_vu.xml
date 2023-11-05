@@ -26,10 +26,10 @@
                 android:gravity="center_vertical"
                 android:layout_marginLeft="10dp"
                 android:id="@+id/tv_namedv"
-                android:text="sfbjb"
+                android:text="Loại dịch vụ"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 />
@@ -37,11 +37,10 @@
                 android:gravity="center_vertical"
                 android:layout_marginLeft="10dp"
                 android:id="@+id/tv_pricedv"
-                android:text="sfbjb"
+                android:text="giá dịch vụ"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
-                android:textStyle="bold"
+                android:textSize="20sp"
                 android:textColor="@color/black"
                 />
         </LinearLayout>
