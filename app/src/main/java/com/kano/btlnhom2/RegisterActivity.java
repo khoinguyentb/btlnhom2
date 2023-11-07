@@ -1,24 +1,26 @@
 package com.kano.btlnhom2;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.knhotel.DAO.QuanLyDAO;
-import com.example.knhotel.DTO.QuanLy;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.kano.btlnhom2.DAO.QuanLyDAO;
+import com.kano.btlnhom2.DTO.QuanLy;
 
 public class RegisterActivity extends AppCompatActivity {
-    TextInputEditText ed_guestName,ed_userName, ed_pass,ed_rePass;
-    TextInputLayout til_guestName,til_userName, til_pass,til_rePass;
-    Button btn_register;
-    TextView tv_login;
-    QuanLyDAO quanLyDAO;
+    private EditText edtName,edtUserName,edtPassword,edtRePassword;
+    private Button btn_register;
+    private TextView tv_login;
+    private QuanLyDAO quanLyDAO;
+    @SuppressLint({"CutPasteId", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,14 +28,10 @@ public class RegisterActivity extends AppCompatActivity {
 
         btn_register = findViewById(R.id.btn_register);
         tv_login = findViewById(R.id.tv_login);
-        til_guestName = findViewById(R.id.til_name_register);
-        til_userName = findViewById(R.id.til_username_register);
-        til_pass = findViewById(R.id.til_pass_register);
-        til_rePass = findViewById(R.id.til_repass_register);
-        ed_guestName = findViewById(R.id.ed_name_register);
-        ed_userName = findViewById(R.id.ed_username_register);
-        ed_pass = findViewById(R.id.ed_pass_register);
-        ed_rePass = findViewById(R.id.ed_repass_register);
+       edtName = findViewById(R.id.edt_Name_Register);
+        edtPassword = findViewById(R.id.edt_Password_Register);
+        edtUserName = findViewById(R.id.edt_User_Name_Register);
+        edtRePassword = findViewById(R.id.edt_RePassword);
         quanLyDAO = new QuanLyDAO(this);
 
         tv_login.setOnClickListener(v -> {
@@ -43,41 +41,41 @@ public class RegisterActivity extends AppCompatActivity {
 
         btn_register.setOnClickListener(v -> {
 
-            String name = ed_guestName.getText().toString();
-            String user = ed_userName.getText().toString();
-            String pass = ed_pass.getText().toString();
-            String rePass = ed_rePass.getText().toString();
+            String name = edtName.getText().toString();
+            String user = edtUserName.getText().toString();
+            String pass = edtPassword.getText().toString();
+            String rePass = edtRePassword.getText().toString();
 
             if(name.equals("")||user.equals("")||pass.equals("")||rePass.equals("")) {
                 if(name.equals("")) {
-                    til_guestName.setError("Chưa nhập tên");
+                    edtName.setError("Chưa nhập tên");
                 }else {
-                    til_guestName.setError("");
+                    edtName.setError("");
                 }
                 if(user.equals("")) {
-                    til_userName.setError("Chưa nhập tên đăng nhập");
+                    edtUserName.setError("Chưa nhập tên đăng nhập");
                 }else{
                     if (quanLyDAO.checkUsername(user) == false) {
-                        til_userName.setError("");
+                        edtUserName.setError("");
                     }else {
-                        til_userName.setError("Tên đăng nhập đã tồn tại");
+                        edtUserName.setError("Tên đăng nhập đã tồn tại");
                     }
                 }
                 if(pass.equals("")) {
-                    til_pass.setError("Chưa nhập mật khẩu");
+                    edtPassword.setError("Chưa nhập mật khẩu");
                 }else{
-                    til_pass.setError("");
+                    edtPassword.setError("");
                 }
                 if(rePass.equals("")) {
-                    til_rePass.setError("Chưa nhập xác nhận mật khẩu");
+                    edtRePassword.setError("Chưa nhập xác nhận mật khẩu");
                 }else {
-                    til_rePass.setError("");
+                    edtRePassword.setError("");
                 }
             }else {
-                til_guestName.setError("");
-                til_userName.setError("");
-                til_pass.setError("");
-                til_rePass.setError("");
+                edtName.setError("");
+                edtUserName.setError("");
+                edtPassword.setError("");
+                edtRePassword.setError("");
                 if (pass.equals(rePass)) {
 
                     if (quanLyDAO.checkUsername(user) == false) {
@@ -95,11 +93,11 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(RegisterActivity.this, "Đăng ký thất bại", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        til_userName.setError("Tên đăng nhập đã tồn tại");
+                        edtUserName.setError("Tên đăng nhập đã tồn tại");
                     }
                 } else {
-                    til_pass.setError("");
-                    til_rePass.setError("Mật khẩu xác nhận sai");
+                    edtPassword.setError("");
+                    edtRePassword.setError("Mật khẩu xác nhận sai");
                     if (quanLyDAO.checkUsername(user) == false) {
 
                         QuanLy obj = new QuanLy();
@@ -115,7 +113,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(RegisterActivity.this, "Đăng ký thất bại", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        til_userName.setError("Tên đăng nhập đã tồn tại");
+                        edtUserName.setError("Tên đăng nhập đã tồn tại");
                     }
                 }
 

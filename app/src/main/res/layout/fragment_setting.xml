@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
+        android:backgroundTint="@color/lavender"
         android:layout_margin="10dp"
         android:text="Thống kê" />
 
@@ -21,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
+        android:backgroundTint="@color/lavender"
         android:layout_margin="10dp"
         android:text="Đổi Mật Khẩu"/>
 
@@ -30,6 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="center"
+        android:backgroundTint="@color/lavender"
         android:layout_gravity="bottom"
         android:text="Đăng xuất"
         tools:ignore="MissingConstraints"/>

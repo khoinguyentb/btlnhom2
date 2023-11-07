@@ -5,6 +5,7 @@
     android:background="@drawable/custom_dialog"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
+    android:backgroundTint="@color/bgitem"
     app:cardCornerRadius="15dp">
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,6 +76,7 @@
                 android:text="Thêm"
                 android:layout_weight="1"
                 android:layout_width="0dp"
+                android:background="@color/lavender"
                 android:layout_height="wrap_content"/>
             <Button
                 android:id="@+id/btnCancel"

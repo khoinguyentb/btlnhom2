@@ -1,27 +1,29 @@
 package com.kano.btlnhom2;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.knhotel.DAO.QuanLyDAO;
-import com.example.knhotel.DTO.QuanLy;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.kano.btlnhom2.DAO.QuanLyDAO;
+import com.kano.btlnhom2.DTO.QuanLy;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
 
-    TextInputLayout til_username,til_password;
-    TextInputEditText ed_username,ed_password;
+    EditText edt_UserName,edt_Password;
     CheckBox chk_remember;
     Button btn_login;
     TextView tv_register;
@@ -32,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     List<QuanLy> list;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,15 +42,13 @@ public class LoginActivity extends AppCompatActivity {
 
         btn_login = findViewById(R.id.btn_login);
         tv_register = findViewById(R.id.tv_register);
-        til_username = findViewById(R.id.til_username_login);
-        til_password = findViewById(R.id.til_password_login);
-        ed_username = findViewById(R.id.ed_username_login);
-        ed_password = findViewById(R.id.ed_pass_login);
+        edt_Password = findViewById(R.id.edt_Password);
+        edt_UserName = findViewById(R.id.edt_User_Name);
         chk_remember = findViewById(R.id.chk_login_remember);
         dao = new QuanLyDAO(this);
         SharedPreferences preferences = getSharedPreferences("USER_FILE",MODE_PRIVATE);
-        ed_username.setText(preferences.getString("USERNAME",""));
-        ed_password.setText(preferences.getString("PASSWORD",""));
+        edt_UserName.setText(preferences.getString("USERNAME",""));
+        edt_Password.setText(preferences.getString("PASSWORD",""));
         chk_remember.setChecked(preferences.getBoolean("REMEMBER",false));
 
         list = new ArrayList<>();
@@ -67,24 +68,24 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void checkLogin(){
-        strUser = ed_username.getText().toString().trim();
-        strPass = ed_password.getText().toString().trim();
+        strUser = edt_UserName.getText().toString().trim();
+        strPass = edt_Password.getText().toString().trim();
         if (strUser.isEmpty()){
-            til_username.setError("Tên đăng nhập không được để trống");
+            edt_UserName.setError("Tên đăng nhập không được để trống");
             temp++;
         }else{
-            til_username.setError("");
+            edt_UserName.setError("");
         }
         if(strPass.isEmpty()){
-            til_password.setError("Mât khẩu không được để trống");
+            edt_Password.setError("Mât khẩu không được để trống");
             temp++;
         }else{
-            til_password.setError("");
+            edt_Password.setError("");
         }
         if (temp ==0){
             if (dao.checkLogin(strUser,strPass) > 0){
-                til_username.setError("");
-                til_password.setError("");
+                edt_UserName.setError("");
+                edt_Password.setError("");
                 Toast.makeText(this, "Login thành công", Toast.LENGTH_SHORT).show();
                 rememberUser(strUser,strPass,chk_remember.isChecked());
 
@@ -94,15 +95,16 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }else{
-                til_username.setError("Tên đăng nhập không đúng");
-                til_password.setError("Mật khẩu không đúng");
+                edt_UserName.setError("Tên đăng nhập không đúng");
+                edt_Password.setError("Mật khẩu không đúng");
             }
         }else {
             temp =0;
         }
     }
 
-    public void rememberUser(String u,String p,boolean status){
+    @SuppressLint("ApplySharedPref")
+    public void rememberUser(String u, String p, boolean status){
         SharedPreferences preferences = getSharedPreferences("USER_FILE",MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         if (!status){

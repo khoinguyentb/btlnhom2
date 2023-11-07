@@ -1,108 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_margin="8dp"
-    android:padding="15dp">
-
-    <TextView
+    android:background="@color/bgitem">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:text="Đăng ký"
-        android:textColor="@color/dark_blue"
-        android:textSize="30dp"
-        android:textStyle="bold" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Tên người dùng"
-        android:id="@+id/til_name_register"
-        android:layout_marginBottom="15dp"
+        android:background="@color/lavender"
         >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/blue"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_round_account_circle_24"
+            android:scaleType="centerCrop"
+            />
+    </LinearLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ed_name_register"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp">
-
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Tên đăng nhập"
-        android:id="@+id/til_username_register"
-        android:layout_marginBottom="15dp"
-
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ed_username_register"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="Đăng ký Tài Khoản"
+            android:textColor="@color/dark_blue"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_Name_Register"
+                    android:hint="Nhập Tên Người Dùng"
+                    tools:ignore="Autofill,HardcodedText,TextFields" />
 
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Mật khẩu"
-        app:passwordToggleEnabled="true"
-        android:id="@+id/til_pass_register"
-        android:layout_marginBottom="15dp"
-
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ed_pass_register"
+               <EditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Nhập Tên Đăng Nhập"
+                   tools:ignore="Autofill,HardcodedText,TextFields"
+                   android:id="@+id/edt_User_Name_Register"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_Password_Register"
+                    android:hint="Nhập Mật Khẩu"
+                    android:inputType="textPassword"
+                    tools:ignore="Autofill,HardcodedText,TextFields" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt_RePassword"
+                    android:hint="Xác Nhận Mật Khẩu"
+                    android:inputType="textPassword"
+                    tools:ignore="Autofill,HardcodedText,TextFields" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Button
             android:layout_width="match_parent"
-            android:inputType="textPassword"
-            android:layout_height="50dp">
+            android:layout_height="50dp"
+            android:id="@+id/btn_register"
+            android:text="Đăng ký"
+            android:backgroundTint="@color/lavender"
+            android:layout_margin="20dp"
+            />
 
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Xác nhận mật khẩu"
-        app:passwordToggleEnabled="true"
-        android:id="@+id/til_repass_register"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ed_repass_register"
+        <TextView
+            android:id="@+id/tv_login"
             android:layout_width="match_parent"
-            android:inputType="textPassword"
-            android:layout_height="50dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="- Đăng nhập nếu đã có tài khoản -"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
 
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/btn_register"
-        android:text="Đăng ký"
-        android:layout_marginTop="20dp"
-        />
-
-    <TextView
-        android:id="@+id/tv_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="- Đăng nhập nếu đã có tài khoản -"
-        android:textAlignment="center"
-        android:textColor="@color/blue" />
 </LinearLayout>

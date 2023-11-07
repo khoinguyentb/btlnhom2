@@ -29,7 +29,7 @@
             android:id="@+id/bottom_nav_bar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/dark_blue"
+            android:background="@color/lavender"
             app:itemRippleColor="@color/white"
             app:itemTextColor="@color/white"
             app:menu="@menu/menu" />

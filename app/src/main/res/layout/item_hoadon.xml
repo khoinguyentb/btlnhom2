@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="10dp"
 
+android:background="@color/bgitem"
         >
         <TextView
             android:id="@+id/tv_bill_room"
@@ -145,7 +145,8 @@
                 android:id="@+id/btn_check_in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/orange"
+                android:background="@color/lavender"
+                android:layout_margin="10dp"
                 android:layout_gravity="left"
                 android:text="Nhận phòng"/>
         </LinearLayout>

@@ -9,6 +9,7 @@
     android:layout_height="wrap_content"
     android:layout_marginVertical="10dp">
     <LinearLayout
+        android:background="@color/bgitem"
         android:padding="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"

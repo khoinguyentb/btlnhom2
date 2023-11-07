@@ -8,7 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="dark_gray">#8C8989</color>
-    <color name="orange">#63E83F</color>
+    <color name="orange">#8692f7</color>
     <color name="dark_blue">#2540A1</color>
     <color name="blue">#1E88E5</color>
+    <color name="lavender">#8692f7</color>
+    <color name="bgitem">#CFE1E3</color>
 </resources>
