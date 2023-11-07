@@ -73,19 +73,21 @@ public class LoginActivity extends AppCompatActivity {
         if (strUser.isEmpty()){
             edt_UserName.setError("Tên đăng nhập không được để trống");
             temp++;
-        }else{
-            edt_UserName.setError("");
         }
+//        else{
+//            edt_UserName.setError("");
+//        }
         if(strPass.isEmpty()){
             edt_Password.setError("Mât khẩu không được để trống");
             temp++;
-        }else{
-            edt_Password.setError("");
         }
+//        else{
+//            edt_Password.setError("");
+//        }
         if (temp ==0){
             if (dao.checkLogin(strUser,strPass) > 0){
-                edt_UserName.setError("");
-                edt_Password.setError("");
+//                edt_UserName.setError("");
+//                edt_Password.setError("");
                 Toast.makeText(this, "Login thành công", Toast.LENGTH_SHORT).show();
                 rememberUser(strUser,strPass,chk_remember.isChecked());
 

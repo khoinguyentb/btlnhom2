@@ -49,33 +49,36 @@ public class RegisterActivity extends AppCompatActivity {
             if(name.equals("")||user.equals("")||pass.equals("")||rePass.equals("")) {
                 if(name.equals("")) {
                     edtName.setError("Chưa nhập tên");
-                }else {
-                    edtName.setError("");
                 }
+//                else {
+//                    edtName.setError("");
+//                }
                 if(user.equals("")) {
                     edtUserName.setError("Chưa nhập tên đăng nhập");
                 }else{
                     if (quanLyDAO.checkUsername(user) == false) {
-                        edtUserName.setError("");
+//                        edtUserName.setError("");
                     }else {
                         edtUserName.setError("Tên đăng nhập đã tồn tại");
                     }
                 }
                 if(pass.equals("")) {
                     edtPassword.setError("Chưa nhập mật khẩu");
-                }else{
-                    edtPassword.setError("");
                 }
+//                else{
+//                    edtPassword.setError("");
+//                }
                 if(rePass.equals("")) {
                     edtRePassword.setError("Chưa nhập xác nhận mật khẩu");
-                }else {
-                    edtRePassword.setError("");
                 }
+//                else {
+//                    edtRePassword.setError("");
+//                }
             }else {
-                edtName.setError("");
-                edtUserName.setError("");
-                edtPassword.setError("");
-                edtRePassword.setError("");
+//                edtName.setError("");
+//                edtUserName.setError("");
+//                edtPassword.setError("");
+//                edtRePassword.setError("");
                 if (pass.equals(rePass)) {
 
                     if (quanLyDAO.checkUsername(user) == false) {
@@ -96,7 +99,7 @@ public class RegisterActivity extends AppCompatActivity {
                         edtUserName.setError("Tên đăng nhập đã tồn tại");
                     }
                 } else {
-                    edtPassword.setError("");
+//                    edtPassword.setError("");
                     edtRePassword.setError("Mật khẩu xác nhận sai");
                     if (quanLyDAO.checkUsername(user) == false) {
 
@@ -116,10 +119,7 @@ public class RegisterActivity extends AppCompatActivity {
                         edtUserName.setError("Tên đăng nhập đã tồn tại");
                     }
                 }
-
             }
-
         });
-
     }
 }

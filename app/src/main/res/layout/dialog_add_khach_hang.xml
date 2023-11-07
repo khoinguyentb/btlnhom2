@@ -76,7 +76,7 @@
                 android:text="Thêm"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:background="@color/lavender"
+                android:backgroundTint="@color/lavender"
                 android:layout_height="wrap_content"/>
             <Button
                 android:id="@+id/btnCancel"

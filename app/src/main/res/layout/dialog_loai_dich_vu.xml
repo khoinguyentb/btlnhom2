@@ -71,7 +71,7 @@
                     android:layout_height="50dp"
                     android:text="thêm"
                     android:textStyle="bold"
-                    android:background="@color/lavender"
+                    android:backgroundTint="@color/lavender"
                     android:textSize="20dp"
                     />
                 <Button
