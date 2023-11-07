@@ -2,6 +2,7 @@
     <style name="Theme.hotelmanager" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <!-- Primary brand color. -->
+        <item name="windowActionBar">false</item>
         <item name="colorPrimary">@color/orange</item>
         <item name="colorPrimaryVariant">@color/orange</item>
         <item name="colorOnPrimary">@color/white</item>
