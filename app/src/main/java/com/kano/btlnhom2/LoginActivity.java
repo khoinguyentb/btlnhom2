@@ -24,6 +24,7 @@ import java.util.List;
 public class LoginActivity extends AppCompatActivity {
 
     EditText edt_UserName,edt_Password;
+
     CheckBox chk_remember;
     Button btn_login;
     TextView tv_register;
