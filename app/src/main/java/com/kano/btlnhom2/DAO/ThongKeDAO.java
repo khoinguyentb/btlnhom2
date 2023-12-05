@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-
 import com.kano.btlnhom2.Database.DbHelper;
 
 import java.util.ArrayList;
