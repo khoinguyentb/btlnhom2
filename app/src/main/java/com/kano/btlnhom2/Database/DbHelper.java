@@ -11,6 +11,8 @@ public class DbHelper extends SQLiteOpenHelper {
         super(context, dbName, null, dbVersion);
     }
 
+
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createTableManagers = "create table Managers (" +

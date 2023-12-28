@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-
 import com.kano.btlnhom2.Database.DbHelper;
 
 import java.util.ArrayList;
@@ -51,6 +50,7 @@ public class ThongKeDAO {
         return list.get(0);
     }
 
+    
     @SuppressLint("Range")
     public int getDoanhThuTongTienDenBu(String tuNgay, String denNgay){
         String getDoanhThuTongTienDenBu = "SELECT SUM(lost_total) as tienDenBu FROM Bills WHERE bill_date BETWEEN ? AND ?";

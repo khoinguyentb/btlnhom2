@@ -49,6 +49,7 @@ public class DonDichVuAdapter extends RecyclerView.Adapter<DonDichVuAdapter.HoaD
         View view = inflater.inflate(R.layout.item_don_dich_vu,parent,false);
         return new HoaDonViewHolder(view);    }
 
+
     @Override
     public void onBindViewHolder(@NonNull HoaDonViewHolder holder, int position) {
         HoaDonDichVu hoaDonDichVu = list.get(position);

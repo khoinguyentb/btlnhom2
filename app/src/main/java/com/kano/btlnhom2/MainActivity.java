@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     case 4:
                         bottomNavigationView.getMenu().findItem(R.id.nav_5).setChecked(true);
                         break;
+                        
                 }
             }
         });

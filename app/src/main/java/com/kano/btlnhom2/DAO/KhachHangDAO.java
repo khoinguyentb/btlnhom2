@@ -6,7 +6,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-
 import com.kano.btlnhom2.DTO.KhachHang;
 import com.kano.btlnhom2.Database.DbHelper;
 
