@@ -122,9 +122,9 @@ public class Fragment_khachhang extends Fragment {
                         if(ed_name.getText().length()==0||
                                 ed_phone.getText().length()==0||
                                 ed_birthday.getText().length()==0){
-                            Toast.makeText(getContext(),"Không được để trống",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(),getActivity().getString(R.string.toast_value_date),Toast.LENGTH_SHORT).show();
                         }else if(!(isValidFormat("dd/MM/yyyy",ed_birthday.getText().toString()))){
-                            Toast.makeText(getContext(),"Không đúng định dạng ngày",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(),getActivity().getString(R.string.toast_value_date_date),Toast.LENGTH_SHORT).show();
                         }else  if(!(checkPhone(ed_phone.getText().toString()))){
                             Toast.makeText(getContext(),"Không đúng định dạng điện thoại",Toast.LENGTH_SHORT).show();
                         }
@@ -171,8 +171,6 @@ public class Fragment_khachhang extends Fragment {
     }
     private void FinterList(String text) {
         ArrayList<KhachHang> filteredList=new ArrayList<>();
-//        list=dao.getAll();
-
 
         for (KhachHang khachHang: list){
             if (khachHang.getName().toLowerCase().contains(text.toLowerCase())){

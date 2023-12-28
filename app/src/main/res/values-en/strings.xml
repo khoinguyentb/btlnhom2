@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hotel Manager</string>
+
+
+    <string name="title_thongke">REVENUE STATISTICS</string>
+    <string name="hint_tu_ngay">Since</string>
+    <string name="hint_den_ngay">To date</string>
+    <string name="hint_ten_dang_nhap">User name</string>
+    <string name="hint_mat_khau">Password</string>
+    <string name="hint_ten_nguoi_dung">User name</string>
+    <string name="hint_xac_nhan_mat_khau">Confirm password</string>
+    <string name="hint_ten_khach_hang">Customer name</string>
+    <string name="hint_so_dien_thoai">Phone number</string>
+    <string name="hint_ngay_sinh">Date of birth</string>
+    <string name="hint_ten_loai_dich_vu">Service type name</string>
+    <string name="hint_gia">Price</string>
+    <string name="hint_ten_phong">Room name</string>
+    <string name="hint_gia_phong">Room Rates</string>
+    <string name="hint_ten_loai_phong">Room type name</string>
+    <string name="hint_mat_khau_moi">A new password</string>
+    <string name="hint_mat_khau_cu">Old password</string>
+    <string name="tv_doanh_thu_tong">Total revenue</string>
+    <string name="tv_doanh_thu_dich_vu">Service revenue</string>
+    <string name="tv_doanh_thu_den_bu">Compensation revenue</string>
+    <string name="tv_dang_nhap">Log in</string>
+    <string name="tv_dang_ki_neu_chua_co_tk">- Register an account if you don\'t have one -</string>
+    <string name="tv_dang_nhap_neu_co_tk">- Log in if you already have an account -</string>
+    <string name="tv_dang_ki">Register Account</string>
+    <string name="tv_khach_hang">Client</string>
+    <string name="tv_don_dich_vu">Service application</string>
+    <string name="tv_ngay_tao">Date created:</string>
+    <string name="tv_hoa_don_cua">Invoice of:</string>
+    <string name="tv_loai_dich_vu">Type of service:</string>
+    <string name="tv_so_luong_dich_vu">Number of services:</string>
+    <string name="tv_tong_tien">Total amount:</string>
+    <string name="tv_them_loai_dich_vu">Add Service Type</string>
+    <string name="tv_loai_phong">Kind of room</string>
+    <string name="tv_hoa_don">Bill</string>
+    <string name="tv_ten_dich_vu">service name</string>
+    <string name="tv_phong">Room</string>
+    <string name="tv_tien_phong">Room charge:</string>
+    <string name="tv_tien_dich_vu">Service fee:</string>
+    <string name="tv_tien_den_bu">Compensation :</string>
+    <string name="tv_vnd">VND</string>
+    <string name="tv_ghi_chu">Note</string>
+    <string name="tv_doi_mat_khau">Change Password</string>
+    <string name="tv_ten_phong">Room Name</string>
+    <string name="tv_gia_phong">Room Rates</string>
+    <string name="tv_ngay_dat_dich_vu">Date created:</string>
+    <string name="tv_tu">From :</string>
+    <string name="tv_den">Arrive :</string>
+    <string name="tv_da_tra_phong">Checked Out</string>
+    <string name="tv_chua_tra_phong">Haven\'t Checked Out yet</string>
+    <string name="tv_ngay_sinh">Date of birth :</string>
+    <string name="tv_sua_khach_hang">EDIT CUSTOMER</string>
+    <string name="title_login">Welcome to Nhom2 Holtel</string>
+
+    <string name="btn_thong_ke">Statistical</string>
+    <string name="btn_quay_lai">Come back</string>
+    <string name="btn_dang_ki">Register</string>
+    <string name="btn_them">More</string>
+    <string name="btn_huy">Cancel</string>
+    <string name="btn_tim">Find</string>
+    <string name="btn_doi_mat_khau">Change Password</string>
+    <string name="btn_dang_xuat">Log out</string>
+    <string name="btn_ngon_ngu">Language</string>
+    <string name="btn_nhan_phong">Check in</string>
+    <string name="btn_cap_nhat">UPDATE</string>
+
+    <string name="cbo_luu_mat_khau">Save Password</string>
+    <string name="cbo_da_tra_phong">Checked out</string>
+
+    <string name="notification_xac_nhan_huy">Do you want to cancel your order?</string>
+    <string name="notification_xac_nhan_nhan_phong">Check-in confirmation</string>
+    <string name="toast_huy_thanh_cong">Cancellation successful</string>
+    <string name="toast_huy_that_bai">Cancel failed</string>
+    <string name="toast_nhan_thanh_cong">Check-in successful</string>
+    <string name="toast_loi_nhan">Check-in error</string>
+    <string name="toast_chua_den_ngay">Check-in date has not yet arrived</string>
+    <string name="toast_value_date">Cannot be left blank</string>
+    <string name="toast_value_date_date">Incorrect date format</string>
+    <string name="toast_cap_nhat_thanh_cong">Update successful</string>
+    <string name="toast_cap_nhat_khong_thanh_cong">Update failed</string>
+    <string name="don_dich_vu">Service application</string>
+    <string name="loai_dich_vu">Type of service</string>
+
+    <string-array name="trang_thai_hd">
+    <item>Haven\'t checked in yet</item>
+    <item>Haven\'t checked out yet</item>
+    <item>Checked out</item>
+</string-array>
+</resources>

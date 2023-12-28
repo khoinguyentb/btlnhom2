@@ -17,18 +17,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text=" Đơn dịch vụ"
+            android:text="@string/tv_don_dich_vu"
             android:textAlignment="center"
             android:textSize="40dp"
             android:textColor="@color/white"
-            android:background="@color/orange"
+            android:background="@color/magenta"
             />
 
         <TextView
             android:id="@+id/dialog_tv_ngay_tao_don_dv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ngày tạo: "
+            android:text="@string/tv_ngay_tao"
             android:textColor="@color/black"
             android:layout_marginLeft="10dp"
             android:textSize="20dp"
@@ -42,7 +42,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hóa đơn của: "
+                android:text="@string/tv_hoa_don_cua"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:layout_marginLeft="10dp"
@@ -63,7 +63,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Loại dịch vụ: "
+                android:text="@string/tv_loai_dich_vu"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:layout_margin="10dp"/>
@@ -84,7 +84,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Số lượng dịch vụ: "
+                android:text="@string/tv_so_luong_dich_vu"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:layout_margin="10dp"/>
@@ -106,7 +106,7 @@
                 android:id="@+id/dialog_tv_tong_tien_don_dv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tổng tiền: "
+                android:text="@string/tv_tong_tien"
                 android:textColor="@color/black"
                 android:layout_marginLeft="10dp"
                 android:textSize="20dp"
@@ -134,14 +134,14 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/lavender"
                 android:layout_marginRight="10dp"
-                android:text="Thêm"/>
+                android:text="@string/btn_them"/>
             <Button
                 android:id="@+id/dialog_btn_huy_don_dv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
-                android:text="Hủy"
+                android:text="@string/btn_huy"
                 android:backgroundTint="@color/dark_gray"/>
 
         </LinearLayout>

@@ -14,9 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Phòng"
+            android:text="@string/tv_phong"
             android:textAlignment="center"
-            android:background="@color/orange"
+            android:background="@color/magenta"
             android:textSize="40dp"
             android:textStyle="bold"
             android:textColor="@color/white"/>
@@ -30,7 +30,7 @@
                 android:id="@+id/dialog_ed_tenphong"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tên phòng"
+                android:hint="@string/hint_ten_phong"
                 android:background="@drawable/custom_edittext"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -42,7 +42,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Loại Phòng"
+                android:text="@string/tv_loai_phong"
                 android:textColor="@color/black"
                 android:padding="10dp"
                 android:layout_marginLeft="5dp"/>
@@ -64,7 +64,7 @@
                 android:id="@+id/dialog_ed_giaphong"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Giá phòng"
+                android:hint="@string/hint_gia_phong"
                 android:background="@drawable/custom_edittext"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,14 +81,14 @@
                 android:layout_weight="1"
                 android:layout_marginRight="10dp"
                 android:backgroundTint="@color/lavender"
-                android:text="Thêm"/>
+                android:text="@string/btn_them"/>
             <Button
                 android:id="@+id/dialog_btn_huythemphong"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
-                android:text="Hủy"
+                android:text="@string/btn_huy"
                 android:backgroundTint="@color/dark_gray"/>
 
         </LinearLayout>

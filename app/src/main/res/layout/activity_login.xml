@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
-            android:text="Welcom to Nhom2 Holtel"
+            android:text="@string/title_login"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -36,7 +36,7 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Đăng nhập"
+        android:text="@string/tv_dang_nhap"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/dark_blue"
@@ -56,13 +56,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/edt_User_Name"
-                android:hint="Tên Đăng Nhập"
-                tools:ignore="HardcodedText" />
+                android:hint="@string/hint_ten_dang_nhap"
+                tools:ignore="Autofill,HardcodedText,TextFields" />
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/edt_Password"
-                android:hint="Mật Khẩu"
+                android:hint="@string/hint_mat_khau"
                 android:inputType="textPassword"
                 tools:ignore="HardcodedText" />
 
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:text="Lưu Mật Khẩu"
+                android:text="@string/cbo_luu_mat_khau"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -83,13 +83,13 @@
         android:layout_margin="10dp"
         android:backgroundTint="@color/lavender"
         android:id="@+id/btn_login"
-        android:text="Đăng nhập"
+        android:text="@string/tv_dang_nhap"
         tools:ignore="HardcodedText" />
     <TextView
         android:id="@+id/tv_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="- Đăng ký tài khoản nếu chưa có -"
+        android:text="@string/tv_dang_ki_neu_chua_co_tk"
         android:textColor="@color/blue"
         android:layout_marginTop="20dp"
         android:textAlignment="center"

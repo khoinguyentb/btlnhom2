@@ -56,10 +56,10 @@ public class FragmentTabPhong extends Fragment {
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                 switch (position){
                     case 0:
-                        tab.setText("Phòng");
+                        tab.setText(getActivity().getString(R.string.tv_phong));
                         break;
                     case 1:
-                        tab.setText("Loại Phòng");
+                        tab.setText(getActivity().getString(R.string.tv_loai_phong));
                         break;
 
                 }

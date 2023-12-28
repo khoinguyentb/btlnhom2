@@ -1,6 +1,7 @@
 package com.kano.btlnhom2.Fragment;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,9 +17,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 
 import com.kano.btlnhom2.DAO.ThongKeDAO;
+import com.kano.btlnhom2.LanguageActivity;
+import com.kano.btlnhom2.MainActivity;
 import com.kano.btlnhom2.R;
 
 import java.text.SimpleDateFormat;
@@ -29,6 +34,7 @@ import java.util.GregorianCalendar;
 public class FragmentThongKe extends Fragment {
 
     Button btnDoanhThu;
+    Button btnBack;
     ImageView btnTuNgay,btnDenNgay;
     EditText edtTuNgay,edtDenNgay;
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -51,6 +57,7 @@ public class FragmentThongKe extends Fragment {
         btnTuNgay = view.findViewById(R.id.doanhthu_img_tungay);
         btnDenNgay = view.findViewById(R.id.doanhthu_img_denngay);
         btnDoanhThu = view.findViewById(R.id.doanhthu_btn_tinh);
+        btnBack = view.findViewById(R.id.doanhthu_btn_back);
 
         edtTuNgay = view.findViewById(R.id.doanhthu_edt_tungay);
         edtDenNgay = view.findViewById(R.id.doanhthu_edt_denngay);
@@ -128,6 +135,13 @@ public class FragmentThongKe extends Fragment {
             }
         });
 
+        btnBack.setOnClickListener(v->{
+//            replaceFragment(new FragmentThongKe());
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);
+            getActivity().finish();
+        });
+
     }
     DatePickerDialog.OnDateSetListener mDateTuNgay = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -150,4 +164,19 @@ public class FragmentThongKe extends Fragment {
             edtDenNgay.setText(sdf.format(c.getTime()));
         }
     };
+
+    private  void replaceFragment(Fragment fragment) {
+
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+// Thay thế "fragmentToClose" bằng instance của Fragment bạn muốn đóng
+        Fragment fragmentToClose = fragmentManager.findFragmentByTag("your_fragment_tag");
+
+        if (fragmentToClose != null) {
+            fragmentTransaction.remove(fragmentToClose);
+            fragmentTransaction.commit();
+        }
+
+    }
 }

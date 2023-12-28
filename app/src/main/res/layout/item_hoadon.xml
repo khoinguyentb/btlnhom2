@@ -6,14 +6,14 @@
     android:layout_margin="15dp"
     android:padding="5dp"
     app:cardCornerRadius="10dp"
-    android:background="@color/blue"
-    >
+    android:background="@color/blue">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
         android:orientation="vertical"
-
-android:background="@color/bgitem"
+        android:background="@color/bgitem"
         >
         <TextView
             android:id="@+id/tv_bill_room"
@@ -148,7 +148,7 @@ android:background="@color/bgitem"
                 android:background="@color/lavender"
                 android:layout_margin="10dp"
                 android:layout_gravity="left"
-                android:text="Nhận phòng"/>
+                android:text="@string/btn_nhan_phong"/>
         </LinearLayout>
 
 

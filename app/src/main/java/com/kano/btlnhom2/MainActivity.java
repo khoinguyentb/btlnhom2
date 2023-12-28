@@ -1,15 +1,19 @@
 package com.kano.btlnhom2;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kano.btlnhom2.Adapter.ViewpagerAdapter;
+import com.kano.btlnhom2.utils.SystemUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,8 +23,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SystemUtils.setLocale(this);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
+        ActionBar actionBar = getSupportActionBar();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Drawable drawable= getResources().getDrawable(R.drawable.baseline_density_medium_24);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(drawable);
         viewPager = findViewById(R.id.viewpager);
         bottomNavigationView = findViewById(R.id.bottom_nav_bar);
 

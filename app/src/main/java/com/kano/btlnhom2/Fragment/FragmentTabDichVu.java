@@ -57,10 +57,10 @@ public class FragmentTabDichVu extends Fragment {
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                 switch (position){
                     case 0:
-                        tab.setText("Đơn dịch vụ");
+                        tab.setText(getActivity().getString(R.string.don_dich_vu));
                         break;
                     case 1:
-                        tab.setText("Loại dịch vụ");
+                        tab.setText(getActivity().getString(R.string.loai_dich_vu));
                         break;
 
                 }

@@ -14,6 +14,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.kano.btlnhom2.DAO.QuanLyDAO;
 import com.kano.btlnhom2.DTO.QuanLy;
+import com.kano.btlnhom2.utils.SystemUtils;
 
 public class RegisterActivity extends AppCompatActivity {
     private EditText edtName,edtUserName,edtPassword,edtRePassword;
@@ -24,6 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SystemUtils.setLocale(this);
         setContentView(R.layout.activity_register);
 
         btn_register = findViewById(R.id.btn_register);
@@ -37,6 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         tv_login.setOnClickListener(v -> {
             Intent intent1 = new Intent(RegisterActivity.this,LoginActivity.class);
             startActivity(intent1);
+            finishAffinity();
         });
 
         btn_register.setOnClickListener(v -> {
@@ -112,6 +115,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(RegisterActivity.this, "Đằng ký thành công", Toast.LENGTH_SHORT).show();
                             Intent intent1 = new Intent(RegisterActivity.this,LoginActivity.class);
                             startActivity(intent1);
+                            finishAffinity();
                         } else {
                             Toast.makeText(RegisterActivity.this, "Đăng ký thất bại", Toast.LENGTH_SHORT).show();
                         }

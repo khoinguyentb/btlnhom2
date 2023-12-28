@@ -52,7 +52,7 @@ public class DonDichVuAdapter extends RecyclerView.Adapter<DonDichVuAdapter.HoaD
     @Override
     public void onBindViewHolder(@NonNull HoaDonViewHolder holder, int position) {
         HoaDonDichVu hoaDonDichVu = list.get(position);
-        holder.tv_ngayDatDV.setText("Ngày tạo hóa đơn: "+hoaDonDichVu.getService_date());
+        holder.tv_ngayDatDV.setText(context.getString(R.string.tv_ngay_tao)+hoaDonDichVu.getService_date());
 
         HoaDonDAO hoaDonDAO = new HoaDonDAO(context);
         HoaDon hoaDon = hoaDonDAO.getId(String.valueOf(hoaDonDichVu.getBill_id()));
@@ -63,31 +63,31 @@ public class DonDichVuAdapter extends RecyclerView.Adapter<DonDichVuAdapter.HoaD
         KhachHangDAO khachHangDAO = new KhachHangDAO(context);
         KhachHang khachHang = khachHangDAO.getID(String.valueOf(hoaDon.getGuest_id()));
 
-        holder.tv_tenPhong.setText("Phòng: "+phong.getName());
-        holder.tv_ten_khach.setText("Khách hàng: "+khachHang.getName());
-        holder.tv_tuNgay.setText("Từ: "+hoaDon.getStart_date());
-        holder.tv_denNgay.setText("đến ngày: "+hoaDon.getEnd_date());
-        holder.tv_loaiDV.setText("Loại dịch vụ: "+loaiDichVu.getName());
+        holder.tv_tenPhong.setText(context.getString(R.string.tv_phong)+" :"+phong.getName());
+        holder.tv_ten_khach.setText(context.getString(R.string.tv_khach_hang)+ " : "+khachHang.getName());
+        holder.tv_tuNgay.setText(context.getString(R.string.tv_tu)+hoaDon.getStart_date());
+        holder.tv_denNgay.setText(context.getString(R.string.tv_den)+hoaDon.getEnd_date());
+        holder.tv_loaiDV.setText(context.getString(R.string.tv_loai_dich_vu) + " : "+loaiDichVu.getName());
 
-        holder.tv_soLuong.setText("Số lượng dịch vụ: "+hoaDonDichVu.getService_quantity());
-        holder.tv_tongTienDV.setText("Tổng tiền: "+hoaDonDichVu.getTotal()+" VNĐ");
+        holder.tv_soLuong.setText( context.getString(R.string.tv_so_luong_dich_vu)+" : "+hoaDonDichVu.getService_quantity());
+        holder.tv_tongTienDV.setText(context.getString(R.string.tv_tong_tien)+hoaDonDichVu.getTotal()+ context.getString(R.string.tv_vnd));
 
         holder.btn_xoa_hddv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("Delete")
-                        .setTitle("Bạn có muốn hủy đơn không")
+                        .setTitle(context.getString(R.string.notification_xac_nhan_huy))
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 if (hoaDonDichVuDAO.delete(hoaDonDichVu.getId()) > 0) {
-                                    Toast.makeText(context, "Hủy thành công", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(context, context.getString(R.string.toast_huy_thanh_cong), Toast.LENGTH_SHORT).show();
                                     list.clear();
                                     list.addAll(hoaDonDichVuDAO.getAll());
                                     notifyDataSetChanged();
                                 } else {
-                                    Toast.makeText(context, "Hủy thất bại", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(context, context.getString(R.string.toast_huy_that_bai), Toast.LENGTH_SHORT).show();
                                 }
                             }
                         })

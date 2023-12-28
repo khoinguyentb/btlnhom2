@@ -70,31 +70,31 @@ public class HoaDonAdapter extends RecyclerView.Adapter<HoaDonAdapter.HoaDonView
 
         KhachHangDAO khachHangDAO = new KhachHangDAO(context);
         KhachHang khachHang = khachHangDAO.getID(String.valueOf(hoaDon.getGuest_id()));
-        holder.tv_tenKhach.setText("Tên khách hàng: "+khachHang.getName());
+        holder.tv_tenKhach.setText(context.getString(R.string.hint_ten_khach_hang)+" : "+khachHang.getName());
 
         PhongDao phongDao = new PhongDao(context);
         Phong phong = phongDao.getID(String.valueOf(hoaDon.getRoom_id()));
-        holder.tv_tenPhong.setText("Phòng: "+phong.getName());
+        holder.tv_tenPhong.setText(context.getString(R.string.tv_phong)+" : "+phong.getName());
 
-        holder.tv_tienPhong.setText("Tiền phòng: "+hoaDon.getRoom_total()+" VNĐ");
-        holder.tv_ngayBD.setText("Từ: "+ hoaDon.getStart_date());
-        holder.tv_ngayKT.setText("Đến: "+hoaDon.getEnd_date());
-        holder.tv_ngayHD.setText("Ngày tạo hóa đơn: "+hoaDon.getBill_date());
+        holder.tv_tienPhong.setText(context.getString(R.string.tv_tien_phong)+hoaDon.getRoom_total()+context.getString(R.string.tv_vnd));
+        holder.tv_ngayBD.setText(context.getString(R.string.tv_tu)+ hoaDon.getStart_date());
+        holder.tv_ngayKT.setText(context.getString(R.string.tv_den)+hoaDon.getEnd_date());
+        holder.tv_ngayHD.setText(context.getString(R.string.tv_ngay_tao)+hoaDon.getBill_date());
 
-        holder.tv_tienMat.setText("Tiền đền bù: \n"+hoaDon.getLost_total()+" VNĐ");
-        holder.tv_tienDV.setText("Tiền dịch vụ: \n"+hoaDon.getService_total()+" VNĐ");
-        holder.tv_ghiChu.setText("Ghi chú: "+hoaDon.getNote());
-        holder.tv_tongTien.setText("Tổng tiền: "+hoaDon.getBill_total()+" VNĐ");
+        holder.tv_tienMat.setText( context.getString(R.string.tv_tien_den_bu)+" \n"+hoaDon.getLost_total()+context.getString(R.string.tv_vnd));
+        holder.tv_tienDV.setText( context.getString(R.string.tv_tien_dich_vu)+"\n"+hoaDon.getService_total()+context.getString(R.string.tv_vnd));
+        holder.tv_ghiChu.setText(context.getString(R.string.tv_ghi_chu)+hoaDon.getNote());
+        holder.tv_tongTien.setText(context.getString(R.string.tv_tong_tien)+hoaDon.getBill_total()+context.getString(R.string.tv_vnd));
 
         if (hoaDon.getStatus()==1){
             holder.tv_trangThai.setVisibility(View.VISIBLE);
             holder.btn_check_in.setVisibility(View.GONE);
-            holder.tv_trangThai.setText("Đã trả phòng");
+            holder.tv_trangThai.setText(context.getString(R.string.tv_da_tra_phong));
             holder.tv_trangThai.setTextColor(Color.GREEN);
         }else if (hoaDon.getStatus()==0){
             holder.tv_trangThai.setVisibility(View.VISIBLE);
             holder.btn_check_in.setVisibility(View.GONE);
-            holder.tv_trangThai.setText("Chưa Trả Phòng");
+            holder.tv_trangThai.setText(context.getString(R.string.tv_chua_tra_phong));
             holder.tv_trangThai.setTextColor(Color.RED);
         }
 
@@ -103,7 +103,7 @@ public class HoaDonAdapter extends RecyclerView.Adapter<HoaDonAdapter.HoaDonView
             public void onClick(View v) {
                 Log.d("zzz", "onClick: ngày "+datetime);
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Xác nhận nhận phòng")
+                builder.setTitle(context.getString(R.string.notification_xac_nhan_nhan_phong))
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -123,15 +123,15 @@ public class HoaDonAdapter extends RecyclerView.Adapter<HoaDonAdapter.HoaDonView
                                     hoaDon.setBill_total(hoaDon.getBill_total());
 
                                     if (hoaDonDAO.update(hoaDon) > 0) {
-                                        Toast.makeText(context, "Nhận phòng thành công", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(context, context.getString(R.string.toast_nhan_thanh_cong), Toast.LENGTH_LONG).show();
                                         arrayList.clear();
                                         arrayList.addAll(hoaDonDAO.getAllstatus3());
                                         notifyDataSetChanged();
                                     } else {
-                                        Toast.makeText(context, "Lỗi nhận phòng", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(context, context.getString(R.string.toast_loi_nhan), Toast.LENGTH_SHORT).show();
                                     }
                                 }
-                                Toast.makeText(context,"Chưa đến ngày đặt phòng",Toast.LENGTH_LONG).show();
+                                Toast.makeText(context,context.getString(R.string.toast_chua_den_ngay),Toast.LENGTH_LONG).show();
 
                             }
                         })

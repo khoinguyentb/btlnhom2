@@ -57,8 +57,8 @@ public class LoaiDichVuAdapter extends RecyclerView.Adapter<LoaiDichVuAdapter.Lo
         if(loaiDichVu == null){
             return;
         }
-        holder.e1.setText("Tên dịch vụ : " + loaiDichVu.getName());
-        holder.e2.setText("Giá : " + loaiDichVu.getPrice()+" VNĐ");
+        holder.e1.setText(context.getString(R.string.tv_ten_dich_vu) + loaiDichVu.getName());
+        holder.e2.setText(context.getString(R.string.hint_gia) + loaiDichVu.getPrice()+context.getString(R.string.tv_vnd));
 
         holder.btn_xoa.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -186,11 +186,11 @@ public class LoaiDichVuAdapter extends RecyclerView.Adapter<LoaiDichVuAdapter.Lo
                 int temp = 0;
                 if (edtTen.getText().toString().equals("")){
                     temp++;
-                    til_ten.setError("Tên không được để trống");
+                    til_ten.setError(context.getString(R.string.toast_value_date));
                 }
                 if (edtGia.getText().toString().equals("")){
                     temp++;
-                    til_gia.setError("Giá không được để trống");
+                    til_gia.setError(context.getString(R.string.toast_value_date));
                 }
                 if (temp == 0){
                     loaiDichVu.setName(edtTen.getText().toString());
@@ -202,9 +202,9 @@ public class LoaiDichVuAdapter extends RecyclerView.Adapter<LoaiDichVuAdapter.Lo
                         list.addAll(loaiDichVuDao.getAll());
                         notifyDataSetChanged();
 
-                        Toast.makeText(context, "Cập nhật thành công", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, context.getString(R.string.toast_cap_nhat_thanh_cong), Toast.LENGTH_SHORT).show();
                     }else {
-                        Toast.makeText(context, "Cập nhật thất bại", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, context.getString(R.string.toast_cap_nhat_khong_thanh_cong), Toast.LENGTH_SHORT).show();
                     }
                 }else {
                     temp=0;

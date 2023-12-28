@@ -60,9 +60,9 @@ public class KhachHangAdapter extends RecyclerView.Adapter<KhachHangAdapter.Khac
     @Override
     public void onBindViewHolder(@NonNull KhachHangViewHolder holder, int position) {
         KhachHang khachHang = list.get(position);
-        holder.txtName.setText("Khách hàng : "+list.get(position).getName());
-        holder.txtPhone.setText("SĐT : "+list.get(position).getPhone());
-        holder.txtBirtday.setText("Ngày sinh : "+list.get(position).getBirthday());
+        holder.txtName.setText( context.getString(R.string.tv_khach_hang)+" : "+khachHang.getName());
+        holder.txtPhone.setText(context.getString(R.string.hint_so_dien_thoai)+" : "+khachHang.getPhone());
+        holder.txtBirtday.setText(context.getString(R.string.tv_ngay_sinh)+khachHang.getBirthday());
 
         Calendar calendar =Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -85,12 +85,12 @@ public class KhachHangAdapter extends RecyclerView.Adapter<KhachHangAdapter.Khac
                 Button btnCancel = dialog.findViewById(R.id.btnCancel);
 
                 Button btnAdd = dialog.findViewById(R.id.btnAdd_KH);
-                btnAdd.setText("CẬP NHẬT");
+                btnAdd.setText(context.getString(R.string.btn_cap_nhat));
                 EditText ed_name = dialog.findViewById(R.id.edName);
                 EditText ed_phone = dialog.findViewById(R.id.edPhone);
                 EditText ed_birthday = dialog.findViewById(R.id.edBirthday);
                 TextView txt = dialog.findViewById(R.id.txtTitel);
-                txt.setText("SỬA KHÁCH HÀNG");
+                txt.setText(context.getString(R.string.tv_sua_khach_hang));
                 ed_name.setText(khachHang.getName());
                 ed_phone.setText(khachHang.getPhone()+"");
                 ed_birthday.setText(khachHang.getBirthday()+"");
@@ -117,9 +117,9 @@ public class KhachHangAdapter extends RecyclerView.Adapter<KhachHangAdapter.Khac
                         if(ed_name.getText().length()==0||
                                 ed_phone.getText().length()==0||
                                 ed_birthday.getText().length()==0){
-                            Toast.makeText(context,"Không được để trống",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context,context.getString(R.string.toast_value_date),Toast.LENGTH_SHORT).show();
                         }else if(!(isValidFormat("dd/MM/yyyy",ed_birthday.getText().toString()))){
-                            Toast.makeText(context,"Không đúng định dạng ngày",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context,context.getString(R.string.toast_value_date_date),Toast.LENGTH_SHORT).show();
                         }
                         else {
                             khachHang.setName(ed_name.getText().toString());
@@ -127,12 +127,12 @@ public class KhachHangAdapter extends RecyclerView.Adapter<KhachHangAdapter.Khac
                             khachHang.setBirthday(ed_birthday.getText().toString());
                             long res = dao.update(khachHang);
                             if (res>0){
-                                Toast.makeText(context,"Cập nhật thành công",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context,context.getString(R.string.toast_cap_nhat_thanh_cong),Toast.LENGTH_SHORT).show();
                                 list.clear();
                                 list.addAll(dao.getAll());
                                 notifyDataSetChanged();
                             }else {
-                                Toast.makeText(context,"Cập nhật thất bại ",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context,context.getString(R.string.toast_cap_nhat_khong_thanh_cong),Toast.LENGTH_SHORT).show();
                             }
                             dialog.dismiss();
                         }

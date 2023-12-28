@@ -14,8 +14,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/orange"
-            android:text="Hóa Đơn"
+            android:background="@color/magenta"
+            android:text="@string/tv_hoa_don"
             android:textStyle="bold"
             android:textSize="30dp"
             android:gravity="center"
@@ -39,7 +39,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Khách hàng "
+                    android:text="@string/tv_khach_hang"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     />
@@ -67,6 +67,7 @@
                         android:layout_marginTop="6dp"
                         android:background="@drawable/custom_edittext"
                         android:orientation="horizontal"
+                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <ImageView
@@ -78,7 +79,7 @@
                         <EditText
                             android:padding="6dp"
                             android:id="@+id/ed_start_date"
-                            android:hint="Ngày bắt đầu"
+                            android:hint="@string/hint_tu_ngay"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:enabled="false"
@@ -88,6 +89,7 @@
                         android:layout_marginTop="6dp"
                         android:background="@drawable/custom_edittext"
                         android:orientation="horizontal"
+                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <ImageView
@@ -99,7 +101,7 @@
                         <EditText
                             android:padding="6dp"
                             android:id="@+id/ed_end_date"
-                            android:hint="Ngày kết thúc"
+                            android:hint="@string/hint_den_ngay"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:enabled="false"
@@ -114,8 +116,8 @@
                         android:layout_marginLeft="10dp"
                         android:textStyle="bold"
                         android:layout_weight="1"
-                        android:text="Tìm"
-                        android:backgroundTint="@color/orange"
+                        android:text="@string/btn_tim"
+                        android:backgroundTint="@color/magenta"
                     />
                 </LinearLayout>
 
@@ -127,7 +129,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Phòng "
+                    android:text="@string/tv_phong"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     />
@@ -146,7 +148,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tiền Phòng: "
+                    android:text="@string/tv_tien_phong"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/black"/>
 
@@ -166,7 +168,7 @@
                 android:id="@+id/dialog_tv_bill_service_total"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tiền dịch vụ:"
+                android:text="@string/tv_tien_dich_vu"
                 android:textSize="15dp"
                 android:textColor="@color/black"
                 android:layout_marginTop="10dp"
@@ -179,14 +181,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tiền đền bù :  "
+                    android:text="@string/tv_tien_den_bu"
                     android:textSize="15dp"
                     android:layout_weight="1"
                     android:textColor="@color/black"
                     />
 
                 <EditText
-                    android:layout_weight="3"
+                    android:layout_weight="4"
                     android:id="@+id/ed_lost_total"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -196,7 +198,7 @@
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="VNĐ"
+                    android:text="@string/tv_vnd"
                     android:gravity="center"
                     android:layout_marginLeft="15dp"
                     android:textColor="@color/black"/>
@@ -209,13 +211,13 @@
                 android:id="@+id/chk_bill_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Đã trả phòng"
+                android:text="@string/cbo_da_tra_phong"
                 android:textSize="15dp"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ghi Chú"
+                android:text="@string/tv_ghi_chu"
                 android:layout_marginLeft="10dp"
                 android:textSize="17dp"
                 android:textColor="@color/black"/>
@@ -235,7 +237,7 @@
                     android:id="@+id/dialog_tv_bill_total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tổng tiền:"
+                    android:text="@string/tv_tong_tien"
                     android:textSize="20dp"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
@@ -262,9 +264,9 @@
                     android:id="@+id/btn_luuhd"
                     android:layout_width="150dp"
                     android:layout_height="50dp"
-                    android:text="thêm"
+                    android:text="@string/btn_them"
                     android:textStyle="bold"
-                    android:backgroundTint="@color/orange"
+                    android:backgroundTint="@color/magenta"
                     android:textSize="20dp"
                     android:layout_gravity="left"
                     />
@@ -273,7 +275,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_width="150dp"
                     android:layout_height="50dp"
-                    android:text="hủy"
+                    android:text="@string/btn_huy"
                     android:backgroundTint="@color/dark_gray"
                     android:textStyle="bold"
                     android:textSize="20dp"

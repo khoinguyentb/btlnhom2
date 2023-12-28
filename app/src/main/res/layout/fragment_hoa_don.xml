@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="48dp"
             android:layout_marginBottom="20dp"
-            android:text="Hóa đơn"
+            android:text="@string/tv_hoa_don"
             android:textColor="@color/black"
             android:textSize="18dp" />
 

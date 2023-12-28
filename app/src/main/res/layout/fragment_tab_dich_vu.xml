@@ -9,14 +9,14 @@
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lavender"
+        android:background="@color/white"
         android:id="@+id/id_tablayout_dich_vu">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Đơn dịch vụ"
-            android:backgroundTint="@color/teal_200"
+            android:backgroundTint="@color/black"
             />
 
         <com.google.android.material.tabs.TabItem
@@ -32,7 +32,6 @@
         android:id="@+id/id_viewpager_dich_vu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         />
 
 </LinearLayout>

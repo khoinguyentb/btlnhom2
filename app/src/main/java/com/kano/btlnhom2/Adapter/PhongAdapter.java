@@ -86,9 +86,9 @@ public class PhongAdapter extends RecyclerView.Adapter<PhongAdapter.phongViewHol
         }catch (Exception e){
             Log.d("zzzz", "onBindViewHolder phong adapter");
         }
-        holder.item_phong_loaiphong.setText("Loại phòng: \n"+loaiphong.getName());
+        holder.item_phong_loaiphong.setText( context.getString(R.string.tv_loai_phong)+" : \n"+loaiphong.getName());
 
-        holder.item_phong_giaphong.setText("Giá phòng: \n"+phong.getPrice()+" VNĐ");
+        holder.item_phong_giaphong.setText( context.getString(R.string.tv_gia_phong)+"  \n"+phong.getPrice()+" VNĐ");
 
         PhongDao dao = new PhongDao( context);
         holder. imageView. setOnClickListener(new View.OnClickListener() {
@@ -190,12 +190,12 @@ public class PhongAdapter extends RecyclerView.Adapter<PhongAdapter.phongViewHol
                     }
                 });
 
-                dialog_btn_themphong.setText("Cập nhật");
+                dialog_btn_themphong.setText(context.getString(R.string.btn_cap_nhat));
                 dialog_btn_themphong.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         if (dialog_ed_tenphong.getText().length() == 0) {
-                            Toast.makeText(context, "Không được để trống", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, context.getString(R.string.toast_value_date), Toast.LENGTH_SHORT).show();
                         } else {
 
                             phong.setName(dialog_ed_tenphong.getText().toString());
@@ -203,13 +203,13 @@ public class PhongAdapter extends RecyclerView.Adapter<PhongAdapter.phongViewHol
                             phong.setPrice(Integer.parseInt(dialog_ed_giaphong.getText().toString()));
                             phong.setStatus(0);
                             if (dao.update(phong) > 0) {
-                                Toast.makeText(context, "sửa phòng thành công", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, context.getString(R.string.toast_cap_nhat_thanh_cong), Toast.LENGTH_SHORT).show();
                                 list.clear();
                                 list.addAll(dao.getAll());
                                 notifyDataSetChanged();
                                 dialog.dismiss();
                             } else {
-                                Toast.makeText(context, "sửa phòng thất bại", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, context.getString(R.string.toast_cap_nhat_khong_thanh_cong), Toast.LENGTH_SHORT).show();
                             }
                         }
                     }

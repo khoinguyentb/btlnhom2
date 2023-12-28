@@ -41,7 +41,7 @@ public class QuanLyDAO {
         values.put("id",odj.getId());
         values.put("name",odj.getName());
         values.put("password",odj.getPassword());
-        return db.update("ThuThu",values,"id=?",new String[]{String.valueOf(odj.getId())});
+        return db.update("Managers",values,"id=?",new String[]{String.valueOf(odj.getId())});
     }
 
 
@@ -64,7 +64,6 @@ public class QuanLyDAO {
             return false;
         else
             return true;
-
     }
 
     @SuppressLint("Range")

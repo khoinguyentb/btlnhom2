@@ -15,8 +15,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/orange"
-            android:text="Loại phòng"
+            android:background="@color/magenta"
+            android:text="@string/tv_loai_phong"
             android:textSize="30dp"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -25,7 +25,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="tên loại phòng"
+            android:hint="@string/hint_ten_loai_phong"
             app:errorEnabled="true"
             android:id="@+id/ed_loaiphong"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -46,9 +46,9 @@
                 android:id="@+id/btn_themlp"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:text="thêm"
+                android:text="@string/btn_them"
                 android:textStyle="bold"
-                android:backgroundTint="@color/orange"
+                android:backgroundTint="@color/magenta"
                 android:textSize="20dp"
                 />
             <Button
@@ -56,7 +56,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:text="hủy"
+                android:text="@string/btn_huy"
                 android:backgroundTint="@color/dark_gray"
                 android:textStyle="bold"
                 android:textSize="20dp"/>

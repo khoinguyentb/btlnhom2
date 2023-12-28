@@ -16,9 +16,9 @@
             android:textSize="30dp"
             android:gravity="center"
             android:padding="6dp"
-            android:background="@color/orange"
+            android:background="@color/magenta"
             android:textColor="@color/white"
-            android:text="Khách hàng"
+            android:text="@string/tv_khach_hang"
             android:layout_width="match_parent"
             android:id="@+id/txtTitel"
             android:layout_height="wrap_content" />
@@ -30,7 +30,7 @@
             <EditText
                 android:padding="6dp"
                 android:id="@+id/edName"
-                android:hint="Tên khách hàng"
+                android:hint="@string/hint_ten_khach_hang"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/custom_edittext"
                 android:layout_width="match_parent"
@@ -38,7 +38,7 @@
             <EditText
                 android:padding="6dp"
                 android:id="@+id/edPhone"
-                android:hint="Số điện thoại"
+                android:hint="@string/hint_so_dien_thoai"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/custom_edittext"
                 android:layout_width="match_parent"
@@ -48,6 +48,7 @@
                 android:layout_marginTop="6dp"
                 android:background="@drawable/custom_edittext"
                 android:orientation="horizontal"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
@@ -60,7 +61,7 @@
 
                     android:padding="6dp"
                     android:id="@+id/edBirthday"
-                    android:hint="Ngày sinh"
+                    android:hint="@string/hint_ngay_sinh"
                     android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"/>
@@ -73,14 +74,14 @@
             android:layout_height="wrap_content">
             <Button
                 android:id="@+id/btnAdd_KH"
-                android:text="Thêm"
+                android:text="@string/btn_them"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:backgroundTint="@color/lavender"
                 android:layout_height="wrap_content"/>
             <Button
                 android:id="@+id/btnCancel"
-                android:text="Hủy"
+                android:text="@string/btn_huy"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_marginLeft="20dp"

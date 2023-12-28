@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:gravity="center"
-            android:text="Đăng ký Tài Khoản"
+            android:text="@string/tv_dang_ki"
             android:textColor="@color/dark_blue"
             android:textSize="30dp"
             android:textStyle="bold" />
@@ -52,27 +52,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/edt_Name_Register"
-                    android:hint="Nhập Tên Người Dùng"
+                    android:hint="@string/hint_ten_nguoi_dung"
                     tools:ignore="Autofill,HardcodedText,TextFields" />
 
                <EditText
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:hint="Nhập Tên Đăng Nhập"
+                   android:hint="@string/hint_ten_dang_nhap"
                    tools:ignore="Autofill,HardcodedText,TextFields"
                    android:id="@+id/edt_User_Name_Register"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/edt_Password_Register"
-                    android:hint="Nhập Mật Khẩu"
+                    android:hint="@string/hint_mat_khau"
                     android:inputType="textPassword"
                     tools:ignore="Autofill,HardcodedText,TextFields" />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/edt_RePassword"
-                    android:hint="Xác Nhận Mật Khẩu"
+                    android:hint="@string/hint_xac_nhan_mat_khau"
                     android:inputType="textPassword"
                     tools:ignore="Autofill,HardcodedText,TextFields" />
             </LinearLayout>
@@ -81,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:id="@+id/btn_register"
-            android:text="Đăng ký"
+            android:text="@string/btn_dang_ki"
             android:backgroundTint="@color/lavender"
             android:layout_margin="20dp"
             />
@@ -91,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="- Đăng nhập nếu đã có tài khoản -"
+            android:text="@string/tv_dang_nhap_neu_co_tk"
             android:textAlignment="center"
             android:textColor="@color/blue"
             tools:ignore="HardcodedText" />

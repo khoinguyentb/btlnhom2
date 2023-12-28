@@ -38,9 +38,6 @@ public class PhongDao {
 
 
 
-
-
-
     public List<Phong> getDaTa(String sql, String...selectionArgs){
         List<Phong> list=new ArrayList<>();
         Cursor c=db.rawQuery(sql,selectionArgs);

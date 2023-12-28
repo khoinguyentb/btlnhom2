@@ -17,6 +17,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.kano.btlnhom2.DAO.QuanLyDAO;
 import com.kano.btlnhom2.DTO.QuanLy;
+import com.kano.btlnhom2.utils.SystemUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SystemUtils.setLocale(this);
         setContentView(R.layout.activity_login);
 
         btn_login = findViewById(R.id.btn_login);

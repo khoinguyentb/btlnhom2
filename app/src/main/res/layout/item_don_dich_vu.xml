@@ -14,7 +14,7 @@
             android:id="@+id/hddv_tv_ngay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ngày đặt dịch vụ"
+            android:text="@string/tv_ngay_dat_dich_vu"
             android:textSize="15dp"/>
 
         <LinearLayout
@@ -72,13 +72,13 @@
                 android:id="@+id/hddv_tv_loai_dv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Loại dịch vụ"
+                android:text="@string/tv_loai_dich_vu"
                 android:layout_marginRight="20dp"/>
             <TextView
                 android:id="@+id/hddv_tv_so_luong_dv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Số lượng dịch vụ " />
+                android:text="@string/tv_so_luong_dich_vu" />
         </LinearLayout>
 
         <LinearLayout
